@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parallax Scrolling Website | Vanilla Javascript</title>
+    <link rel="stylesheet" href="static/css/home.css" />
+    <!-- <link rel="stylesheet" href="static/css/style.css" /> -->
+    <link rel="stylesheet" href="static/css/swiper-bundle.min.css" />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="hdr01">
+      <a href="#" class="logo">logo</a>
+      <ul>
+        <li><a href="hasm,com" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">contact</a></li>
+      </ul>
+    </div>
+    <div class="secato01">
+      <!-- صورة رائعة لاي خلفية -->
+      <img src="static/img/stars.png" id="stars" />
+      <img src="static/img/moon.png" id="moon" />
+      <img src="static/img/mountains_behind.png" id="mountains_behind" />
+      <h2 id="text">logo</h2>
+      <a href="#sec" id="btn">إستكشف</a>
+      <img src="static/img/mountains_front.png" id="mountains_front" />
+    </div>
+
+    <div class="sec" id="sec" style=" float: right ; ">
+      <h2 dir="">شركة logo البرمجية</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis
+        <p dir="">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis
+        </p>
+      </p>
+      <br/><br/>
+        </p>
+      </div>
+      <hr>
+      <div id="p2">
+        <div class="container0">
+          <button onclick="generate()" id="bttb">dolor sit elit</button>
+
+          <script src="static/js/anime.min.js"></script>
+          <script>
+        const container = document.querySelector('.container0');
+       for ( var i = 1; i<=200; i++){
+          const blocks = document.createElement('div');
+          blocks.classList.add('block');
+          container.appendChild(blocks);
+                          
+        }
+
+        function generate(){
+            anime({
+              targets: '.block',
+                translateX : function(){
+                    return anime.random(-700,700)
+                },
+                translateY : function(){
+                    return anime.random(-250,250 )
+                },
+                scale: function(){
+                    return anime.random(2,5)
+                },
+                content:  function(){
+                    return anime.random(2,5)
+                }, 
+                // background:function(){
+                //     var letters = '0123456789ABCDEFHIGKLMNOPQRSVUVLMSOSXZqwertyuiopasdfghjklzxcvbnm';
+                //     var color = '#';
+                //     for (var i = 0; i < 6; i++) {
+                //       color += letters[Math.floor(Math.random() * 16)];
+                //     }
+                //     return color;
+                // }, 
+                
+                
+            })
+         
+        }
+        generate();
+        let index = 0;
+        const colors = ['#444', '#ff9213', '#7597de', '#d62828', '#81b29a', 'purple'];
+        const btn2 = document.getElementById('bttb');
+        const basdad = document.getElementsByClassName('block');
+
+
+        btn2.addEventListener('click', function onClick() {
+            btn2.style.backgroundColor = colors[index];
+            btn2.style.color = "#fff";
+            index = index >= colors.length - 1 ? 0 : index + 1;
+
+
+        });
+
+      </script>
+        </div>
+      </div>
+      <hr>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis
+      <div class="p14">
+        <div class="t1">بماذا يساعدك الموقع الاكتروني</div>
+        <div class="cr">
+          <div class="cr_img">
+            <a href="hamada.com"> <img src="static/img/success.png"></a>
+          </div>
+          <div class="det">
+            <h2> رسمية اكثر</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco ex ea
+              commodo consequat. Duis
+            </p>
+          </div>
+        </div>
+        <div class="cr active">
+          <div class="cr_img">
+            <img src="static/img/box.png">
+          </div>
+          <div class="det">
+            <h2> عرض افضل للمنتجات </h2>
+            <p>Lorem ipsum dolor sit amet, tempor incididunt ut labore et dolore
+              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+              ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis</p>
+          </div>
+        </div>
+        <div class="cr">
+          <div class="cr_img">
+            <img src="static/img/popular.png">
+          </div>
+          <div class="det">
+            <h2> وصول اكثر</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="p3">
+        <div class="bg"></div>
+        <div class="hdr3">
+          <a href="#" class="logo">Fruits</a>
+          <div class="toggle"></div>
+          <ul class="navigation">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">What's New</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="textBox">
+            <h2 dir="">Lorem ipsum dolor sit </h2>
+            <p dir="" style="text-align: justify;">Lorem ipsum dolor sit amet,
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat. Duis Lorem ipsum dolor sit amet,
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat. Duis</p>
+            <a href="#">Lorem ipsum dolor</a>
+          </div>
+          <div class="imgBox">
+            <img src="static/img/apple.png" class="fruits">
+          </div>
+        </div>
+
+
+        <ul class="thumb">
+          <li data-text="Apple" class="active"><img src="static/img/apple.png"
+              onclick="imgSlider('static/img/apple.png');changeBgColor('#fc4a55')"></li>
+          <li data-text="Mango"><img src="static/img/mango.png"
+              onclick="imgSlider('static/img/mango.png');changeBgColor('#ffcc02')"></li>
+          <li data-text="Watermelon"><img src="static/img/watermelon.png"
+              onclick="imgSlider('static/img/watermelon.png');changeBgColor('#92ba3c')"></li>
+          <li data-text="Dragon Fruits"><img src="static/img/dragonFruits.png"
+              onclick="imgSlider('static/img/dragonFruits.png');changeBgColor('#fb6cb2')"></li>
+          <li data-text="PineApple"><img src="static/img/pineApple.png"
+              onclick="imgSlider('static/img/pineApple.png');changeBgColor('#ffb42b')"></li>
+        </ul>
+        <ul class="sci">
+          <li><a href="#"><img src="static/img/facebook.png"></a></li>
+          <li><a href="#"><img src="static/img/twitter.png"></a></li>
+          <li><a href="#"><img src="static/img/instagram.png"></a></li>
+        </ul>
+        <script>
+        function imgSlider(anything){
+            document.querySelector('.fruits').src = anything;
+        }
+        // change background color
+        function changeBgColor(color){
+            const bg = document.querySelector('.bg');
+            bg.style.background = color;
+        }
+        let menuToggle = document.querySelector('.toggle');
+            menuToggle.onclick = function(){
+                 menuToggle.classList.toggle('active')
+            }
+        // add active class in selected thmbnails
+         let el = document.querySelectorAll('.thumb li');
+        for (let i = 0; i < el.length; i++){
+           el[i].onclick = function(){
+             var c = 0;
+            while (c <  el.length){
+               el[c++].className = 'check';
+           }
+
+             el[i].className = 'check active';
+                                
+           }
+        }
+        </script>
+      </div>
+
+      <div class="p5">
+        <div class="circle"></div>
+        <div class="hdr5">
+          <a href="#"><img src="static/img/logo.png" class="logo"></a>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">What's New</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="content5">
+          <div class="textBox">
+            <h2 dir="">It's not just coffee
+              <br>its <span class="strbsc">Starbucks</span></h2>
+
+            <p dir="">Lorem ipsum dolor sit amet, consectetur adipiscing ut
+              labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis</p>
+            <a href="#" class="btnasd">Learn More</a>
+          </div>
+          <div class="imgBox5">
+            <img src="static/img/img1.png" class="starbucks">
+          </div>
+        </div>
+        <ul class="thumb2">
+          <li><img src="static/img/thumb1.png"
+              onclick="imgSlider2('static/img/img1.png');changeCircleColor('#017143')"></li>
+          <li><img src="static/img/thumb2.png"
+              onclick="imgSlider2('static/img/img2.png');changeCircleColor('#eb7495')"></li>
+        </ul>
+        <ul class="sci2">
+          <li><a href="#"><img src="static/img/facebook.png"></a></li>
+          <li><a href="#"><img src="static/img/twitter.png"></a></li>
+          <li><a href="#"><img src="static/img/instagram.png"></a></li>
+        </ul>
+        <hr class="hr5" style="position:absolute; bottom: 0;left: 0; width:
+          100%; border:1px solid #017143;">
+
+        <script>
+            function imgSlider2(anything){
+                document.querySelector('.starbucks').src = anything;
+            }
+            function changeCircleColor(color){
+                const circle = document.querySelector('.circle');
+                circle.style.background = color; 
+                const strbsc = document.querySelector('.strbsc');
+                strbsc.style.color = color; 
+                const btnasd = document.querySelector('.btnasd');
+                btnasd.style.background = color; 
+                const hr5 = document.querySelector('.hr5');
+                hr5.style.border = "1px solid" + color; 
+            }
+            </script>
+      </div>
+
+      <div class="p11">
+        <div class="circle11"></div>
+        <div class="circle11-1"></div>
+        <div class="circle11-2"></div>
+        <div class="hdr11">
+          <a href="#"><img src="static/img/logo.png" class="logo"></a>
+          <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">What's New</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="content6">
+          <div class="imgBox5">
+            <img src="static/img/undraw_success_factors_re_ce93.svg"
+              class="starbucks11">
+          </div>
+          <div class="textBox">
+            <h2 dir="">Lorem ipsum dolor sit amet, consectetur adipiscing</h2>
+            <p dir="" style="text-align: justify;">
+              Lorem ipsum dolor sit amet, consectetur adipiscing ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis
+              Lorem ipsum dolor sit amet, consectetur adipiscing ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis
+              Lorem ipsum dolor sit amet, consectetur adipiscing ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis
+            </p>
+            <a href="#" class="btnasd" style="background-color: #00BFA6;">Learn
+              More</a>
+          </div>
+        </div>
+
+        <hr class="hr11" color="#00BFA6">
+        <div class="t11"><span style="color:#fff;">Lorem ipsum dolor</span> sit
+          amet, consectetur adipiscing</div>
+        <div class="itaems">
+          <div class="itaem" dir="rtl">
+            <div class="img"><img src="static/img/laptop.png" alt=""
+                style="max-width: 80px;"></div>
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <div class="text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis
+              Lorem ipsum dolor sit amet, consectetur adipiscing ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis
+            </div>
+          </div>
+          <div class="itaem" dir="rtl">
+            <div class="img"><img src="static/img/database.png" alt=""
+                style="max-width: 80px;"></i></div>
+          <h2><span>Lorem ipsum dolor sit amet</span> </h2>
+          <div class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis
+            Lorem ipsum dolor sit amet, consectetur adipiscing ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis
+          </div>
+        </div>
+
+      </div>
+      <div class="itaems2">
+        <div class="itaem" dir="rtl">
+          <div class="img"><img src="static/img/budget.png" alt=""
+              style="max-width: 80px;"></div>
+          <h2>Lorem ipsum dolor sit amet</h2>
+          <div class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis
+            Lorem ipsum dolor sit amet, consectetur adipiscing ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis
+          </div>
+        </div>
+        <div class="itaem" dir="rtl">
+          <div class="img"><img src="static/img/chat.png" alt=""
+              style="max-width: 80px;"></div>
+          <h2> Lorem ipsum dolor sit <span>amet</span></h2>
+          <div class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis
+            Lorem ipsum dolor sit amet, consectetur adipiscing ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis
+          </div>
+        </div>
+
+      </div>
+      <div class="itaems3">
+        <div class="itaem" dir="rtl">
+          <div class="img"><img src="static/img/cooperation.png" alt=""
+              style="max-width: 80px;"></div>
+          <h2><span> Lorem ipsum dolor sit amet</span></h2>
+          <div class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis
+            Lorem ipsum dolor sit amet, consectetur adipiscing ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis
+          </div>
+        </div>
+        <div class="itaem" dir="rtl">
+          <div class="img"><img src="static/img/artificial-intelligence.png"
+              alt="" style="max-width: 80px;"></div>
+          <h2><span> Lorem ipsu</span>m dolor sit amet </h2>
+          <div class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis
+            Lorem ipsum dolor sit amet, consectetur adipiscing ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="p4">
+      <div class="container4">
+        <div class="hdr4">
+          <a href="#" class="logo">Logo</a>
+          <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Contactk</a></li>
+          </ul>
+        </div>
+        <div class="content2">
+          <h2>Lorem ipsum dolor</h2>
+          <p style="text-align: justify;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis
+            Lorem ipsum dolor sit amet, consectetur adipiscing ut labore et
+            dolore magna aliqua.
+          </p>
+          <a href="#">Read More</a>
+        </div>
+        <div class="imgBx">
+          <img src="static/img/character.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="p6">
+      <div class="circle2"></div>
+      <div class="hdr6">
+        <a href="#"><img src="static/img/logo.png" class="logo"></a>
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">What's New</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="content6">
+        <div class="imgBox5">
+          <img src="static/img/email.svg" class="starbucks">
+        </div>
+        <div class="textBox">
+          <h2>Lorem ipsum dolor <span class="strbsc">example@yourcompany.com</span></h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis
+          </p>
+          <a href="#" class="btnasd">Learn More</a>
+        </div>
+      </div>
+      <ul class="sci3">
+        <li><a href="#"><img src="static/img/facebook.png"></a></li>
+        <li><a href="#"><img src="static/img/twitter.png"></a></li>
+        <li><a href="#"><img src="static/img/instagram.png"></a></li>
+      </ul>
+
+    </div>
+    <div class="p7">
+      <div class="t1">Lorem ipsum dolor sit amet</div>
+      <div class="t2">مرر مؤشر الماوس فوق كل عنصر او اضغط عليه</div>
+
+      <div class="container7">
+        <ul class="thumb7">
+          <!-- onmouseover عند الهروفر -->
+          <li onmouseover="changeImageSrc('static/img/shoes1.png')"><img
+              src="static/img/shoes1.png"></li>
+          <li onmouseover="changeImageSrc('static/img/shoes2.png')"><img
+              src="static/img/shoes2.png"></li>
+          <li onmouseover="changeImageSrc('static/img/shoes3.png')"><img
+              src="static/img/shoes3.png"></li>
+        </ul>
+        <div class="imgBox">
+          <h2>Nike Air Zoom</h2>
+          <img src="static/img/shoes1.png" class="shoesss">
+          <ul class="size">
+            <span>Size</span>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+          </ul>
+          <a href="#" class="btn">Add To Cartk</a>
+        </div>
+      </div>
+      <div class="box">
+        <h2 class="name"> 3d Product </h2>
+        <a href="#" class="buy">Buy Now</a>
+        <div class="circle3"></div>
+        <img src="static/img/running_shoes_PNG5816.png" class="product">
+      </div>
+      <script src="static/js/vanilla-tilt.min.js"></script>
+      <script>
+            function changeImageSrc(anything){
+                document.querySelector('.shoesss').src = anything ;
+            }
+            // طريقة عمل 3d 3d 
+            VanillaTilt.init(document.querySelector(".box"), {
+                max: 25,
+                speed: 400
+            });
+        </script>
+    </div>
+
+    <div class="p8">
+      <div class="t2">مرر مؤشر الماوس فوق كل عنصر او اضغط عليه</div>
+
+      <!-- <div class="circle81"></div> -->
+      <!-- <div class="circle82"></div> -->
+      <div class="circle83"></div>
+      <div class="circle84"></div>
+
+      <div class="card2">
+        <div class="circle4"></div>
+        <div class="content">
+          <h2>Pepsi Cola</h2><br>
+          <p dir="rtl">استمتع بلذة الطعم المنعش واللذيذ مع سكر حقيقي 100% بطعم
+            الكولا
+            المنعشة ,واستمتع بلحظاتك مع Pepsi Cola REAL SUGAR.</p>
+          <a href="#">Buy Now</a>
+        </div>
+        <img src="static/img/can-real-sugar-reg.png">
+      </div>
+      <div class="card3">
+        <div class="circle4"></div>
+        <img src="static/img/Pepsi-Zero-Wild-Cherry-12oz-refreshed-v2.png">
+        <div class="content">
+          <h2>Pepsi Cola</h2><br>
+          <p dir="rtl">استمتع بلذة الطعم المنعش واللذيذ مع 0% سكر بطعم الكرز
+            اللذيذ
+            المنعشة ,واستمتع بلحظاتك مع
+            PEPSI ZERO SUGAR WILD CHERRY.</p>
+          <a href="#">Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="wave_se">
+      <div class="wave" id="wave1" style="--i:1;"></div>
+      <div class="wave" id="wave2" style="--i:2;"></div>
+      <div class="wave" id="wave3" style="--i:3;"></div>
+      <div class="wave" id="wave4" style="--i:4;"></div>
+    </div>
+    <script>
+      let wave1 = document.getElementById('wave1');
+      let wave2 = document.getElementById('wave2');
+      let wave3 = document.getElementById('wave3');
+      let wave4 = document.getElementById('wave4');
+
+      window.addEventListener('scroll', function(){
+        let value = window.scrollY;
+
+       wave1.style.backgroundPositionX = 400 + value * 4 + 'px';
+       wave2.style.backgroundPositionX = 300 + value * -4 + 'px';
+       wave3.style.backgroundPositionX = 200 + value * 2 + 'px';
+       wave4.style.backgroundPositionX = 100 + value * -2 + 'px';
+
+      })
+
+     </script>
+    <div class="p9">
+      <img src="static/img/mosque.jpg" class="mosque">
+
+      <div class="hdr9">
+        <a href="#" class="logo">Ramadan</a>
+        <ul class="navigation">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Calendar</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="content9">
+        <div class="textBox">
+          <h2>Lorem ipsum dolor sit </h2>
+          <p>
+            Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum
+            dolor sit amet Lorem ipsum dolor sit amet
+          </p>
+          <a href="#">Read More</a>
+        </div>
+        <ul class="sci9">
+          <li><a href="#"><img src="static/img/facebook.png"></a></li>
+          <li><a href="#"><img src="static/img/twitter.png"></a></li>
+          <li><a href="#"><img src="static/img/instagram.png"></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="p10">
+      <div class="t3"> <span class="watr"> Lorem ipsum dolor sit </span>
+        <span class="watr"> Lorem ipsum dolor sit </span>
+        <span class="watr"> Lorem ipsum dolor sit </span>
+        <span class="watr"> Lorem ipsum dolor sit </span>
+
+      </div>
+      <div class="container10">
+        <div class="box10">
+          <span style="--i:1;"> <i>3d</i> is <i>A</i>wesome</span>
+          <span style="--i:2;"> <i>3d</i> is <i>A</i>wesome</span>
+          <span style="--i:3;"> <i>3d</i> is <i>A</i>wesome</span>
+          <span style="--i:4;"> <i>3d</i> is <i>A</i>wesome</span>
+          <span style="--i:5;"> <i>3d</i> is <i>A</i>wesome</span>
+          <span style="--i:6;"> <i>3d</i> is <i>A</i>wesome</span>
+          <span style="--i:7;"> <i>3d</i> is <i>A</i>wesome</span>
+          <span style="--i:8;"> <i>3d</i> is <i>A</i>wesome</span>
+          <span style="--i:9;"> <i>3d</i> is <i>A</i>wesome</span>
+          <span style="--i:10;"> <i>3d</i> is <i>A</i>wesome</span>
+          <span style="--i:11;"> <i>3d</i> is <i>A</i>wesome</span>
+          <span style="--i:12;"> <i>3d</i> is <i>A</i>wesome</span>
+          <span style="--i:13;"> <i>3d</i> is <i>A</i>wesome</span>
+          <span style="--i:14;"> <i>3d</i> is <i>A</i>wesome</span>
+          <span style="--i:15;"> <i>3d</i> is <i>A</i>wesome</span>
+          <span style="--i:16;"> <i>3d</i> is <i>A</i>wesome</span>
+
+
+        </div>
+      </div>
+      <div class="cloca">
+        <div class="container10-2">
+          <div class="box10-2">
+            <div class="clock">
+              <div class="hour">
+                <div class="hr" id="hr"></div>
+              </div>
+              <div class="min">
+                <div class="mn" id="mn"></div>
+              </div>
+              <div class="sec2">
+                <div class="sc" id="sc"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+          const deg = 6;
+          const hr = document.querySelector('#hr');
+          const mn = document.querySelector('#mn');
+          const sc = document.querySelector('#sc');
+
+          setInterval(() => {
+            let day = new Date();
+            let hh = day.getHours() * 30 ;
+            let mm = day.getMinutes() * deg;
+            let ss = day.getSeconds () * deg;
+            hr.style.transform = `rotateZ(${hh+(mm/12)}deg)`;
+            mn.style.transform = `rotateZ(${(mm/12)}deg)`;
+            sc.style.transform = `rotateZ(${(ss/12)}deg)`;
+          })
+        </script>
+    </div>
+    <div class="p12">
+      <div class="vd">
+        <video autoplay muted loop>
+          <source src="static/vd/video.mp4" type="video/mp4">
+        </video>
+        <h2>Video</h2>
+      </div>
+      <div class="container12">
+        <div class="box12"></div>
+        <div class="box12"></div>
+      </div>
+    </div>
+    <div class="p13">
+
+      <div class="section13">
+        <div class="t1">Lorem ipsum dolor sit</div>
+
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonialBox13">
+                <img src="static/img/right-quote.png" style="max-width: 100px"
+                  class="quote" />
+                <div class="content13">
+                  <p>
+                    Lorem ipsum dolor sit Lorem ipsum dolor sitLorem ipsum dolor
+                    sit Lorem ipsum dolor sit
+                  </p>
+                  <div class="details13">
+                    <div class="imgBx13">
+                      <img
+                        src="static/img/102760734_1915261468608040_4740665280547530586_n.png"
+                        />
+                    </div>
+                    <h3>{{co1_n}}<br /><span><a href="{{co1_url}}">{{co1_url}}</a></span></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonialBox13">
+                <img src="static/img/right-quote.png" style="max-width: 100px"
+                  class="quote" />
+                <div class="content13">
+                  <p>
+                    {{co2_text}}
+                  </p>
+                  <div class="details13">
+                    <div class="imgBx13">
+                      <img src="static/img/{{co2_img}}" />
+                    </div>
+                    <h3>{{co2_n}}<br /><span><a href="{{co2_url}}">{{co2_url}}</a></span></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonialBox13">
+                <img src="static/img/right-quote.png" style="max-width: 100px"
+                  class="quote" />
+                <div class="content13">
+                  <p>
+                    {{co3_text}}
+                  </p>
+                  <div class="details13">
+                    <div class="imgBx13">
+                      <img src="static/img/{{co3_img}}" />
+                    </div>
+                    <h3>{{co3_n}}<br /><span><a href="{{co3_url}}">{{co3_url}}</a></span></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonialBox13">
+                <img src="static/img/right-quote.png" style="max-width: 100px"
+                  class="quote" />
+                <div class="content13">
+                  <p>
+                    {{co4_text}}
+                  </p>
+                  <div class="details13">
+                    <div class="imgBx13">
+                      <img src="static/img/{{co4_img}}" />
+                    </div>
+                    <h3>{{co4_n}}<br /><span><a href="{{co4_url}}">{{co4_url}}</a></span></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonialBox13">
+                <img src="static/img/right-quote.png" style="max-width: 100px"
+                  class="quote" />
+                <div class="content13">
+                  <p>
+                    {{co5_text}}
+                  </p>
+                  <div class="details13">
+                    <div class="imgBx13">
+                      <img src="static/img/{{co5_img}}" />
+                    </div>
+                    <h3>{{co5_n}}<br /><span><a href="{{co5_url}}">{{co5_url}}</a></span></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <script src="static/js/swiper-bundle.min.js"></script>
+      <!-- Initialize Swiper -->
+      <script type="module">
+          var swiper = new Swiper(".swiper", {
+              effect: "coverflow",
+              grabCursor: true,
+              centeredSlides: true,
+              slidesPerView: "auto",
+              coverflowEffect: {
+                  rotate: 0,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 2,
+                  slideShadows: true,
+              },
+                  loop:true,
+          });
+      </script>
+      <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        centeredSlides: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        // mousewheel: true,
+        keyboard: true,
+      });
+    </script>
+    </div>
+    <hr>
+    <div class="p15">
+      <div class="t1">Lorem ipsum dolor sit</div>
+      <div class="t25">Lorem ipsum dolor sit Lorem ipsum </div>
+      <div class="pcard">
+        <div class="con">
+          <div class="call bx">
+            <span class="img "><img src="static/img/phone-call.png" class="po"
+                alt=""></span>
+            <span class="tx"><a href="tel:+">Lorem ipsum dolor sit</a></span>
+          </div>
+          <div class="eml bx">
+            <span class="img "><img src="static/img/email.png" class="po"
+                alt=""></span>
+            <span class="tx"><a href="tel:+"></a>Lorem ipsum dolor sit</span>
+          </div>
+          <div class="fsa bx">
+            <span class="img "><img src="static/img/facebook2.png" class="po"
+                alt=""></span>
+            <span class="tx"><a href="tel:+"></a>Lorem ipsum dolor sit co</span>
+          </div>
+          <div class="ins bx">
+            <span class="img "><img src="static/img/instagram2.png" class="po"
+                alt=""></span>
+            <span class="tx"><a href="tel:+"></a>Lorem ipsum dolor sit co</span>
+          </div>
+        </div>
+        <hr class="hr15" color="#2196f3">
+        <div class="send">
+          <div class="inp">
+            <div class="con bin">
+              <div class="txa">اسم الشركة / النشاط التجاري :</div>
+              <input type="text" class="pot" placeholder="الاسم">
+            </div>
+            <div class="con bin">
+              <div class="txa">البريد الالكتروني او الهاتف :</div>
+              <input type="text" class="pot" placeholder="طريقة الاتصال بكم">
+            </div>
+            <div class="con bin">
+              <div class="txa"> الرسالة/الموضوع :</div>
+              <textarea name="" id="" cols="40" rows="10"
+                placeholder="الرسالة/الموضوع" class="pot" style="height:
+                180px;"></textarea>
+            </div>
+            <div class="con bin">
+              <button type="submit" class="ptn1">ارسال</button>
+            </div>
+          </div>
+          <div class="img">
+            <img src="static/img/undraw_online_message_re_3m5v.svg" alt=""
+              style="max-width: 350px;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <script>
+      let stars = document.getElementById("stars");
+      let moon = document.getElementById("moon");
+      let mountains_behind = document.getElementById("mountains_behind");
+      let text = document.getElementById("text");
+      let btn = document.getElementById("btn");
+      let mountains_front = document.getElementById("mountains_front");
+      let header = document.querySelector('header');
+
+      window.addEventListener('scroll', function(){// مقدار نزول الشاشة
+        let value = window.scrollY;
+        // طريقة عمل الانيميشن ببساطة
+        stars.style.left = value * 0.50 + 'px';
+        moon.style.top = value * 1.05 + 'px';
+        mountains_behind.style.top = value * 0.5 + 'px';
+        mountains_front.style.top = value * 0 + 'px';
+        text.style.marginRight = value * 3 + 'px';
+        text.style.marginTop = value * 1.5 + 'px';
+        btn.style.marginTop = value * 1.5 + 'px';
+        header.style.top = value * 0.5 + 'px';
+
+
+      })
+    </script>
+  </body>
+</html>
